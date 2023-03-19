@@ -43,11 +43,11 @@ class Dictionary:
 
         # 要素を追加
         n = Node(key,val)
-        if self.tbl[hash_val] is None:
+        if self.tbl[hash_val] == None:
             self.tbl[hash_val] = n
         else:   # 衝突が発生
             ptr = self.tbl[hash_val]
-            while ptr.next is not None:  # ptr が末尾になるまで繰り返す
+            while ptr.next != None:  # ptr が末尾になるまで繰り返す
                 ptr = ptr.next # ptr を次に更新
             ptr.next = n # 末尾に n を挿入
 
